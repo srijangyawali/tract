@@ -1,0 +1,281 @@
+html {
+  background-color: #0a0a0a;
+  color: white;
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+/* styling nav bar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+nav #logo {
+  flex-grow: 1;
+}
+
+nav ul {
+  display: flex;
+  flex-basis: 60%;
+  justify-content: space-evenly;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+nav div {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav button {
+  font-size: 0.8rem;
+  padding: 0.8em 2em;
+  border-radius: 0.5em;
+  background: rgb(232, 63, 218);
+  background: linear-gradient(
+    56deg,
+    rgba(232, 63, 218, 1) 0%,
+    rgba(228, 45, 54, 1) 49%,
+    rgba(228, 136, 44, 1) 100%
+  );
+  margin-left: 1.5rem;
+  border: none;
+  font-weight: bold;
+}
+
+nav button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(182, 180, 180);
+}
+
+ul {
+  list-style: none;
+}
+
+nav ul li:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+img {
+  height: 1.3rem;
+}
+
+/* the main section */
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+}
+main #top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main #top p {
+  text-align: center;
+  width: 65%;
+  color: rgb(146, 142, 142);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+main #top h1 {
+  margin-top: 5rem;
+  margin-bottom: 0;
+  letter-spacing: 1%;
+}
+
+main #plogin{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin-left:auto;
+  margin-right: auto; 
+  margin-top: 5rem;
+}
+
+#login #email {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+/* the form */
+#login #email input {
+  background-color: #302e2e;
+  border: 1px solid #302e2e;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+}
+
+#login #email button {
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  background: rgb(232, 63, 218);
+  background: linear-gradient(
+    56deg,
+    rgba(232, 63, 218, 1) 0%,
+    rgba(228, 45, 54, 1) 49%,
+    rgba(228, 136, 44, 1) 100%
+  );
+  color: rgb(182, 180, 180);
+  font-weight: bold;
+}
+
+#login #email button:hover{
+    cursor:pointer;
+    transform:scale(1.1);
+}
+
+#mobile{
+    display: none;
+}
+
+#login #alternate {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: center;
+}
+
+#login #alternate button {
+  background: none;
+  border-width: 1px;
+  border-style: solid;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+  display: flex;
+  align-content: baseline;
+  justify-content: space-evenly;
+  color: white;
+}
+
+#login #alternate button:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+#login #alternate img{
+    height: 1.2rem;
+    padding: 0;
+}
+
+#reset:hover{
+    text-decoration: underline;
+
+}
+
+/* footer */
+footer{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0px;
+    margin-top: 5rem;
+    font-weight: lighter;
+}
+
+@media(max-width: 540px)
+{
+    nav ul, nav div{
+        display: none;
+    }
+    nav #logo{
+        display: block;
+        text-align: center;
+    }
+
+    section #top{
+        width: 100vw;
+    }
+
+    main #login {
+        display: block;
+        flex-direction: column;
+    }
+    main #login #email{
+        width: 100%;
+    }
+
+    main #or{
+        display: none;
+    }
+    main #mobile{
+        display: block;
+        text-align: center;
+        font-weight:lighter;
+        margin: 1rem 0;
+    }
+    main #login #alternate{
+        width: 100%;
+    }
+}
+
+@media(max-width: 750px)
+{
+    body{
+        width: 95%;
+    }
+    nav{
+        overflow: auto;
+        white-space: nowrap;
+    }
+    section #top{
+        width: 100vw;
+    }
+
+    main #login {
+        display: block;
+        flex-direction: column;
+    }
+    main #login #email{
+        width: 100%;
+    }
+
+    main #or{
+        display: none;
+    }
+    main #mobile{
+        display: block;
+        text-align: center;
+        font-weight:lighter;
+        margin: 1rem 0;
+    }
+    main #login #alternate{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 250px;
+    }
+}
